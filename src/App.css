@@ -1,38 +1,95 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h2 {
+  color: #280808;
+  font-weight: lighter;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
+  background-color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin: 100px;
+  min-height: 100vh;
+}
+
+.todo-container {
+  max-width: 500px;
+  width: 100%;
+  background-color: #fff200;
+  text-align: center;
+  padding: 20px;
+  border: none;
+  border-radius: 8px;
+}
+
+.todoInput {
+  width: calc(100% - 55px);
+  border: 1px solid #eee;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.addBtn {
+  position: relative;
+  width: 45px;
+  height: 35px;
+  border: none;
+  background-color: #280808;
+  border-radius: 4px;
+  cursor: pointer;
+  vertical-align: middle;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.removeBtn {
+  position: relative;
+  width: 35px;
+  height: 25px;
+  border: none;
+  background-color: #280808;
+  border-radius: 4px;
+  cursor: pointer;
+  vertical-align: middle;
+  color: white;
+  margin-left:auto;
+  font-size: x-small;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.todoList {
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+  width: 100%;
+  text-align: left;
+}
+
+.todoItem {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  background-color: #ffffff;
+  border-radius: 4px;
+  width: 100%;
+  user-select: none;
+  display: flex;
+}
+
+.checkbox {
+  display:flex;
+}
+
+.text {
+  font-size: smaller;
+  margin: 2px;
+}
+
+.checkboxChecked {
+  display:flex;
+  .text{
+    text-decoration: line-through;
   }
 }
